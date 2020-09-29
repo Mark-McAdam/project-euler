@@ -8,24 +8,31 @@ This problem seems similar to fizzbuzz
 """
 
 
-def get_sum(x):
-    """
-    If x is divisble by 3 
-    or divisible by 5 
-    return the sum of divisible numbers 
-    """
-    sum_this = []
+# def get_sum(x):
+#     """
+#     If x is divisble by 3
+#     or divisible by 5
+#     return the sum of divisible numbers
+#     """
+#     sum_this = []
 
-    for value in range(1, x):
+#     for value in range(1, x):
 
-        if value % 3 == 0 or value % 5 == 0:
+#         if value % 3 == 0 or value % 5 == 0:
 
-            sum_this.append(value)
+#             sum_this.append(value)
 
-            summer = sum(sum_this)
+#             summer = sum(sum_this)
 
-    return summer
+#     return summer
 
 
-if __name__ == "__main__":
-    print(get_sum(1000))
+# if __name__ == "__main__":
+#     print(get_sum(1000))
+
+# rewrite as a list comprehension for practice
+# in the form of
+# output expression      variable     input sequence    conditional
+#       x                    x            range(1000)       if x % 3 == 0 or x % 5 == 0
+
+print(sum(x for x in range(1000) if x % 3 == 0 or x % 5 == 0))
